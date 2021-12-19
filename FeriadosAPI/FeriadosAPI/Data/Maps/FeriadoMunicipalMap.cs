@@ -12,7 +12,7 @@ namespace FeriadosAPI.Data.Maps
     {
         public void Configure(EntityTypeBuilder<FeriadoMunicipal> builder)
         {
-            builder.ToTable("API_FeriadoMunicipal");
+            builder.ToTable("APIFeriadoMunicipal");
 
             builder.HasKey(x => x.Id);
 

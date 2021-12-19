@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FeriadosAPI.Models
 {
-    public class Feriado
+    public abstract class Feriado
     {
         [JsonIgnore]
         public int Id { get; set; }
