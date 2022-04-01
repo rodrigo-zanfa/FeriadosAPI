@@ -48,7 +48,7 @@ namespace FeriadosAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("API_FeriadoEstadual");
+                    b.ToTable("APIFeriadoEstadual");
 
                     b.HasData(
                         new
@@ -119,7 +119,7 @@ namespace FeriadosAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("API_FeriadoMunicipal");
+                    b.ToTable("APIFeriadoMunicipal");
 
                     b.HasData(
                         new
@@ -166,7 +166,7 @@ namespace FeriadosAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("API_FeriadoNacional");
+                    b.ToTable("APIFeriadoNacional");
 
                     b.HasData(
                         new

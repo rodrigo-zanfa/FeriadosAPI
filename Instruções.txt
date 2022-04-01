@@ -1,0 +1,19 @@
+
+01. No VS Code abrir a pasta raíz do FeriadosAPI (onde estará o Dockerfile)
+
+	C:\ProjetosEstudos\FeriadosAPI\FeriadosAPI
+
+
+02. Abrir um terminal e buildar a imagem
+
+	docker build -t rodrigozanfa/feriados-api:latest .
+
+
+03. Rodar a imagem
+
+	docker run -p 44337:80 rodrigozanfa/feriados-api:latest
+
+
+04. Enviar a imagem para o Docker Hub
+
+	docker push rodrigozanfa/feriados-api

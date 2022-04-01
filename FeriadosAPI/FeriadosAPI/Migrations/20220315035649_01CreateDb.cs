@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FeriadosAPI.Migrations
 {
-    public partial class CreateDb : Migration
+    public partial class _01CreateDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "API_FeriadoEstadual",
+                name: "APIFeriadoEstadual",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -20,11 +20,11 @@ namespace FeriadosAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_API_FeriadoEstadual", x => x.Id);
+                    table.PrimaryKey("PK_APIFeriadoEstadual", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "API_FeriadoMunicipal",
+                name: "APIFeriadoMunicipal",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -37,11 +37,11 @@ namespace FeriadosAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_API_FeriadoMunicipal", x => x.Id);
+                    table.PrimaryKey("PK_APIFeriadoMunicipal", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "API_FeriadoNacional",
+                name: "APIFeriadoNacional",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -52,11 +52,11 @@ namespace FeriadosAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_API_FeriadoNacional", x => x.Id);
+                    table.PrimaryKey("PK_APIFeriadoNacional", x => x.Id);
                 });
 
             migrationBuilder.InsertData(
-                table: "API_FeriadoEstadual",
+                table: "APIFeriadoEstadual",
                 columns: new[] { "Id", "Data", "FixoMovel", "Nome", "Uf" },
                 values: new object[,]
                 {
@@ -67,7 +67,7 @@ namespace FeriadosAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "API_FeriadoMunicipal",
+                table: "APIFeriadoMunicipal",
                 columns: new[] { "Id", "Cidade", "Data", "FixoMovel", "Nome", "Uf" },
                 values: new object[,]
                 {
@@ -76,7 +76,7 @@ namespace FeriadosAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "API_FeriadoNacional",
+                table: "APIFeriadoNacional",
                 columns: new[] { "Id", "Data", "FixoMovel", "Nome" },
                 values: new object[,]
                 {
@@ -94,13 +94,13 @@ namespace FeriadosAPI.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "API_FeriadoEstadual");
+                name: "APIFeriadoEstadual");
 
             migrationBuilder.DropTable(
-                name: "API_FeriadoMunicipal");
+                name: "APIFeriadoMunicipal");
 
             migrationBuilder.DropTable(
-                name: "API_FeriadoNacional");
+                name: "APIFeriadoNacional");
         }
     }
 }

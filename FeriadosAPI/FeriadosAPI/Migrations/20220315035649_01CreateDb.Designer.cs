@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FeriadosAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20211128034812_CreateDb")]
-    partial class CreateDb
+    [Migration("20220315035649_01CreateDb")]
+    partial class _01CreateDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,7 +50,7 @@ namespace FeriadosAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("API_FeriadoEstadual");
+                    b.ToTable("APIFeriadoEstadual");
 
                     b.HasData(
                         new
@@ -121,7 +121,7 @@ namespace FeriadosAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("API_FeriadoMunicipal");
+                    b.ToTable("APIFeriadoMunicipal");
 
                     b.HasData(
                         new
@@ -168,7 +168,7 @@ namespace FeriadosAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("API_FeriadoNacional");
+                    b.ToTable("APIFeriadoNacional");
 
                     b.HasData(
                         new

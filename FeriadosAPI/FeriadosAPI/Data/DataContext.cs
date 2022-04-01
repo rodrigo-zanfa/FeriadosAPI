@@ -10,16 +10,21 @@ namespace FeriadosAPI.Data
 {
     public class DataContext : DbContext
     {
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        {
+
+        }
+
         public DbSet<FeriadoNacional> FeriadosNacionais { get; set; }
         public DbSet<FeriadoEstadual> FeriadosEstaduais { get; set; }
         public DbSet<FeriadoMunicipal> FeriadosMunicipais { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            //optionsBuilder.UseSqlite("DataSource=api.db;Cache=Shared");
-            //optionsBuilder.UseSqlServer("Server=PLANTDEV;Database=FuncionalPlant;User ID=appFuncPlant;Password=@Plant2017");
-            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=ControlePessoal;User ID=sa;Password=q1w2e3r4t5");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    //optionsBuilder.UseSqlite("DataSource=api.db;Cache=Shared");
+        //    //optionsBuilder.UseSqlServer("Server=PLANTDEV;Database=FuncionalPlant;User ID=appFuncPlant;Password=@Plant2017");
+        //    optionsBuilder.UseSqlServer("Server=localhost,1433;Database=ControlePessoal2;User ID=sa;Password=q1w2e3r4t5");
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
